@@ -1,0 +1,164 @@
+.navbar {
+    background-color: $primary;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    .container,
+    .container-fluid {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .navbar-brand {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-item {
+        margin-right: 10px;
+
+        .nav-link {
+            color: $white;
+            opacity: 0.8;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.dropdown {
+    position: relative;
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        padding: 10px;
+        background-color: $primary;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.2);
+        z-index: 100;
+    }
+
+    &:hover {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    .dropdown-item {
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: $white;
+        opacity: 0.8;
+        filter: brightness(0.8);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .dropdown-toggle {
+        color: $white;
+        opacity: 0.8;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.active {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    &.show {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    &.show .dropdown-toggle {
+        background-color: $primary;
+    }
+}
+
+.form-inline {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    .form-control {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.search {
+            width: 200px;
+        }
+
+        &.search:focus {
+            width: 300px;
+        }
+
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show i {
+            color: $white;
+        }
+
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:hover,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show.active,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:focus,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:focus.active,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:focus.active:hover {
+            background-color: $primary;
+            color: $white;
+        }
+
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:hover i,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show.active i,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:focus i,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:focus.active i,
+        &.search+.btn:focus+.dropdown .dropdown-toggle.show:focus.active:hover i {
+            color: $white;
+        }
+    }
+}

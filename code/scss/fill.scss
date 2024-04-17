@@ -1,0 +1,238 @@
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    &.btn-xxl {
+        font-size: 2rem;
+    }
+
+    &.btn-xl {
+        font-size: 1.5rem;
+    }
+
+    &.btn-lg {
+        font-size: 1.25rem;
+    }
+
+    &.btn-md {
+        font-size: 1rem;
+    }
+
+    &.btn-sm {
+        font-size: 0.75rem;
+    }
+
+    &.btn-xsm {
+        font-size: 0.5rem;
+    }
+
+    &.btn-block {
+        width: 100%;
+    }
+
+    &.btn-primary {
+        background-color: $primary;
+        color: $white;
+    }
+
+    &.btn-success {
+        background-color: $success;
+        color: $white;
+    }
+
+    &.btn-info {
+        background-color: $info;
+        color: $white;
+    }
+
+    &.btn-warning {
+        background-color: $warning;
+        color: $black;
+    }
+
+    &.btn-danger {
+        background-color: $danger;
+        color: $white;
+    }
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+
+    &.img-rounded {
+        border-radius: 0.5rem;
+    }
+
+    &.img-circle {
+        border-radius: 50%;
+    }
+
+    &.img-thumbnail {
+        padding: 0.25rem;
+        background-color: $gray-200;
+        border: 1px solid $gray-300;
+        border-radius: 0.5rem;
+    }
+
+    &.img-blur {
+        filter: blur(5px);
+    }
+}
+
+.text {
+    &.text-muted {
+        color: $gray-600;
+    }
+
+    &.text-primary {
+        color: $primary;
+    }
+
+    &.text-success {
+        color: $success;
+    }
+
+    &.text-info {
+        color: $info;
+    }
+
+    &.text-warning {
+        color: $warning;
+    }
+
+    &.text-danger,
+    &.text-error {
+        color: $danger;
+    }
+
+    &.text-left {
+        text-align: left;
+    }
+
+    &.text-center {
+        text-align: center;
+    }
+
+    &.text-right {
+        text-align: right;
+    }
+
+    &.text-justify {
+        text-align: justify;
+    }
+}
+
+.bg {
+    &.bg-primary {
+        background-color: $primary;
+        color: $white;
+    }
+
+    &.bg-success {
+        background-color: $success;
+        color: $white;
+    }
+
+    &.bg-info {
+        background-color: $info;
+        color: $white;
+    }
+
+    &.bg-warning {
+        background-color: $warning;
+        color: $black;
+    }
+
+    &.bg-danger,
+    &.bg-error {
+        background-color: $danger;
+        color: $white;
+    }
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+    transition: opacity 0.3s ease;
+
+    &.alert-primary {
+        background-color: $primary;
+        color: $white;
+    }
+
+    &.alert-success {
+        background-color: $success;
+        color: $white;
+    }
+
+    &.alert-info {
+        background-color: $info;
+        color: $white;
+    }
+
+    &.alert-warning {
+        background-color: $warning;
+        color: $black;
+    }
+
+    &.alert-danger,
+    &.alert-error {
+        background-color: $danger;
+        color: $white;
+    }
+}

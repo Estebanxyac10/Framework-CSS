@@ -1,0 +1,54 @@
+$container-max-widths: (
+    xsm: 100%,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
+$grid-gutter-width: 30px;
+
+@mixin make-col($size, $columns) {
+    width: percentage(math.div($size, $columns));
+}
+
+@mixin make-cols() {
+    @each $breakpoint, $container-max-width in $container-max-widths {
+        @media (max-width: $container-max-width) {
+            @for $i from 1 through 12 {
+                .col-#{$breakpoint}-#{$i} {
+                    @include make-col($i, 12);
+                }
+            }
+        }
+    }
+}
+
+@mixin make-container() {
+    .container {
+        width: 100%;
+        padding-right: calc(#{$grid-gutter-width} / 2);
+        padding-left: calc(#{$grid-gutter-width} / 2);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-fluid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@mixin make-row() {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: calc(-#{$grid-gutter-width} / 2);
+        margin-left: calc(-#{$grid-gutter-width} / 2);
+    }
+}
+
+@include make-container();
+@include make-row();
+@include make-cols();

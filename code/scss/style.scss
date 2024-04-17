@@ -1,0 +1,14 @@
+@use "sass:math";
+@import "grid.scss",
+"fill.scss",
+"mask.scss",
+"navbar.scss",
+"popin.scss",
+"tab.scss",
+"tooltip.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

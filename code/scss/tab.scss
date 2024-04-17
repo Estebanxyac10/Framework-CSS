@@ -1,0 +1,38 @@
+.tab-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid $gray-300;
+
+    .tab-item {
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $gray-200;
+        }
+
+        &.active {
+            background-color: $gray-200;
+        }
+
+        &+.tab-item {
+            border-left: 1px solid $gray-300;
+        }
+    }
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid $gray-300;
+
+    .tab-pane {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

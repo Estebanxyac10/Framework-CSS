@@ -1,0 +1,51 @@
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+@each $breakpoint, $value in $breakpoints {
+    @media (min-width: $value) {
+        .visible-#{$breakpoint} {
+            display: none !important;
+
+            @media (max-width: $value) {
+                display: block !important;
+            }
+        }
+
+        .hidden-#{$breakpoint} {
+            display: block !important;
+
+            @media (min-width: $value) {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@mixin visible-print {
+    display: none !important;
+
+    @media print {
+        display: block !important;
+    }
+}
+
+@mixin hidden-print {
+    display: block !important;
+
+    @media print {
+        display: none !important;
+    }
+}
+
+.visible-print {
+    @include visible-print;
+}
+
+.hidden-print {
+    @include hidden-print;
+}
